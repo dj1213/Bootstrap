@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+    *
+    {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+    nav
+    {
+        display: flex;
+        background-color: yellow;
+        justify-content: space-around;
+    }
+    .menu
+    {
+        display: flex;
+        list-style: none;
+    }
+    li a 
+    {
+        display: block;
+        text-decoration: none;
+        padding: 6px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    #close,#show
+    {
+        display: none;
+    }
+
+
+    @media screen and (max-width:768px)
+    {
+     nav
+    {
+        display: flex;
+        background-color: yellow;
+    }
+
+    .menu
+    {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        position: absolute;
+        height: 40vh;
+        
+        width: 30vw;
+        border-radius: 10px;
+        border-top-left-radius: 0px;
+        background-color: rgb(227, 209, 209);
+        left: 0px;
+        transition: 1.0s;
+    }
+    
+
+    li a 
+    {
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        padding-top: 10px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    #close,#show
+    {
+        display: block;
+    }
+   #close
+   {
+    position: relative;
+    left: 20px;
+    top: 5px;
+   }
+
+    #show
+    {
+        position: absolute;
+        left: 20px;
+        top: 5px;
+    }
+
+
+
+    }
+</style>
+
+<body>
+
+    <nav>
+        <i class="fa fa-bars" id="show" onclick="startmenu()"></i>
+
+        <h1>website</h1>
+        <ul class="menu" id="menubar">
+            <i class="fas fa-times" id="close" onclick="closemenu()"></i>
+            <li><a href="">home</a></li>
+            <li><a href="">about</a></li>
+            <li><a href="">contact</a></li>
+            <li><a href="">service</a></li>
+            <li><a href="">detail</a></li>
+        
+        </ul>
+    </nav>
+    <script>
+        function startmenu()
+        {
+            var a = document.getElementById("menubar");
+            a.style.left = "0px";
+        }
+
+        function closemenu()
+        {
+            var b = document.getElementById("menubar");
+            b.style.left = "-350px";
+        }
+
+
+    </script>
+</body>
+
+</html>
