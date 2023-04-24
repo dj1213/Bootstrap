@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+    *
+    {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+    nav
+    {
+        display: flex;
+        padding: 5px;
+        background-color: wheat;
+        justify-content: space-between;
+        
+    }
+    .box2
+    {
+        display: block;
+    }
+    .box3
+    {
+        display: flex;
+
+    }
+    .box3 .headtwo
+    {
+        display: none;
+    }
+    
+    .menu
+    {
+      list-style: none;
+      display: flex;
+    }
+
+    
+   
+    li a 
+    {
+        display: block;
+        text-decoration: none;
+        padding: 6px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    #close,#show
+    {
+        display: none;
+    }
+
+
+    @media screen and (max-width:768px)
+    {
+    
+        .nav
+        {
+            padding: 5px;
+            background-color: wheat;
+        }
+        .box1 
+        {
+            display: flex;
+            
+        }
+
+        .menu
+        {
+            display: flex;
+            flex-direction: column;
+            background-color: yellow;
+            height: 40vh;
+            width: 20vw;
+            position: absolute;
+            left: -250px;
+            border-radius: 15px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius:0px ;
+            transition: 1.2s;
+        }
+        .menu li
+        {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+
+        .box1 h1
+        {
+            display: none;
+        }
+
+        .box2
+        {
+            display: block;
+        }
+        .box3 .headtwo
+    {
+        display: block;
+    }
+
+        
+        #close,#show
+    {
+        display: block;
+    }
+    #show
+    {
+        position: absolute;
+        left: 5px; 
+        top: 10px; 
+    }
+    #close
+    {
+        position: relative;
+        top: 10px;
+        left: 5px;
+    }
+    }
+</style>
+
+<body>
+
+    <nav>
+        <div class="box1">
+        <i class="fa fa-bars" id="show" onclick="startmenu()"></i>
+        <h1 class="headtwo">website</h1>
+        </div>
+
+            <div class="box3">
+                <h1 class="headtwo">website</h1>
+        <ul class="menu" id="menubar">
+            <i class="fas fa-times" id="close" onclick="closemenu()"></i>
+            <li><a href="">home</a></li>
+            <li><a href="">about</a></li>
+            <li><a href="">contact</a></li>
+            <li><a href="">service</a></li>
+            <li><a href="">detail</a></li>
+        
+        </ul></div>
+
+        <div class="box2">
+            <i class="fa fa-cart-plus" id="cart" onclick="startmenu()"></i>
+
+        </div>
+    </nav>
+    <script>
+        function startmenu()
+        {
+            var a = document.getElementById("menubar");
+            a.style.left = "0px";
+        }
+
+        function closemenu()
+        {
+            var b = document.getElementById("menubar");
+            b.style.left = "-350px";
+        }
+
+
+    </script>
+</body>
+
+</html>
